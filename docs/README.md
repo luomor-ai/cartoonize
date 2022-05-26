@@ -1,7 +1,9 @@
 ```shell
 sudo docker build -t yiluxiangbei/cartoonize .
 sudo docker push yiluxiangbei/cartoonize
-sudo docker run -it -p 8701:8080 yiluxiangbei/cartoonize
+sudo docker run -it -p 8701:8080 -d yiluxiangbei/cartoonize
+
+http://49.232.6.131:8701/
 
 sudo docker build -t yiluxiangbei/cartoonize-base:1.0 -f Dockerfile.base .
 sudo docker push yiluxiangbei/cartoonize-base:1.0
