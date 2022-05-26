@@ -13,8 +13,9 @@ sudo docker run -it --volume="$(pwd)":/app --rm yiluxiangbei/cartoonize:1.0 bash
 sudo docker run -it --volume="$(pwd)":/app --rm yiluxiangbei/cartoonize-pip:1.0 bash
 python
 from jinja2 import Markup, escape
-pip install Flask==2.0.3
-pip install Jinja2==3.1.2
+pip install Flask==2.0.3 -i https://pypi.doubanio.com/simple/
+pip install Jinja2==3.1.2 -i https://pypi.doubanio.com/simple/
+pip install numpy==1.19.2 -i https://pypi.doubanio.com/simple/
 
 from jinja2.utils import markupsafe
 markupsafe.Markup()
