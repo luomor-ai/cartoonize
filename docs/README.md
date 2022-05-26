@@ -1,7 +1,10 @@
 ```shell
 sudo docker build -t yiluxiangbei/cartoonize .
 sudo docker push yiluxiangbei/cartoonize
-sudo docker run -it -p 8701:8080 -d yiluxiangbei/cartoonize
+sudo docker run -it --name cartoonize -p 8701:8080 -d yiluxiangbei/cartoonize
+
+sudo docker stop cartoonize
+sudo docker rm cartoonize
 
 http://49.232.6.131:8701/
 
