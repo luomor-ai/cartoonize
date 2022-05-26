@@ -19,6 +19,8 @@ pip install Jinja2==3.1.2
 from jinja2.utils import markupsafe
 markupsafe.Markup()
 
+gunicorn --bind 0.0.0.0:8080 --workers 1 --threads 8 --timeout 0 app:app
+
 sudo docker run -it --volume="$(pwd)":/app --rm python:3.7-slim bash
 python
 from jinja2 import Markup, escape
