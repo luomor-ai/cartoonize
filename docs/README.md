@@ -9,6 +9,8 @@ sudo docker push yiluxiangbei/cartoonize-base:1.0
 sudo docker build -t yiluxiangbei/cartoonize:1.0 .
 sudo docker push yiluxiangbei/cartoonize:1.0
 
+sudo docker run -it --volume="$(pwd)":/app --rm yiluxiangbei/cartoonize:1.0 bash
+
 sudo docker run -it --volume="$(pwd)":/app --rm python:3.7-slim bash
 python
 from jinja2 import Markup, escape
