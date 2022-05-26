@@ -15,6 +15,10 @@ from jinja2 import Markup, escape
 pip install Flask==2.0.3
 pip install Jinja2==3.1.2
 
+from jinja2.utils import markupsafe 
+markupsafe.Markup()
+Markup('')
+
 sudo docker run -it --volume="$(pwd)":/app --rm python:3.7-slim bash
 python
 from jinja2 import Markup, escape
