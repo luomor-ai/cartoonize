@@ -1,9 +1,6 @@
 # Use the official lightweight Python image.
 # https://hub.docker.com/_/python
-FROM python:3.7-slim
-
-RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
-COPY docker/sources.list /etc/apt/sources.list
+FROM yiluxiangbei/cartoonize-base:1.0
 
 # Copy local code to the container image.
 ENV APP_HOME /app
@@ -12,12 +9,6 @@ COPY . ./
 
 ENV GOOGLE_APPLICATION_CREDENTIALS "./token.json"
 
-RUN apt-get update && apt-get install -y \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    ffmpeg
 # Install production dependencies.
 RUN pip install -r requirements.txt -i https://pypi.doubanio.com/simple/
 
