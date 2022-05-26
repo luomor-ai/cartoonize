@@ -1,0 +1,15 @@
+# Use the official lightweight Python image.
+# https://hub.docker.com/_/python
+FROM python:3.7-slim
+
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
+COPY docker/sources.list /etc/apt/sources.list
+
+RUN apt-get update && apt-get install -y \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    ffmpeg
+
+CMD ["tail", "-f", "/dev/null"]
