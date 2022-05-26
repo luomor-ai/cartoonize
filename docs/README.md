@@ -10,6 +10,10 @@ sudo docker build -t yiluxiangbei/cartoonize:1.0 .
 sudo docker push yiluxiangbei/cartoonize:1.0
 
 sudo docker run -it --volume="$(pwd)":/app --rm yiluxiangbei/cartoonize:1.0 bash
+python
+from jinja2 import Markup, escape
+pip install Flask==2.0.3
+pip install Jinja2==3.1.2
 
 sudo docker run -it --volume="$(pwd)":/app --rm python:3.7-slim bash
 python
